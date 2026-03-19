@@ -73,7 +73,7 @@ export const Header = () => {
         }}
       >
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
+          {'Premium Eco Packaging'}
         </Row>
         <Row fillWidth horizontal="center">
           <Row
@@ -109,7 +109,7 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              {routes["/work"] && (
+              {/* {routes["/work"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
@@ -146,7 +146,7 @@ export const Header = () => {
                     />
                   </Row>
                 </>
-              )}
+              )} */}
               {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>
@@ -184,7 +184,7 @@ export const Header = () => {
             gap="20"
           >
             <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
+              {/* {display.time && <TimeDisplay timeZone={person.location} />} */}
             </Flex>
           </Flex>
         </Flex>
