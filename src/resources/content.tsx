@@ -56,7 +56,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/Victorlogo.png",
   label: "Home",
   title: `${person.name}`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -64,9 +64,9 @@ const home: Home = {
   featured: {
     display: true,
     title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Need Something</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
+      <Row gap="20" vertical="center">
+        {/* <strong className="ml-4">Need Something</strong>{" "} */}
+        {/* <Line background="brand-alpha-strong" vert height="20" /> */}
         <Text marginRight="4" onBackground="brand-medium">
           Connect with US
         </Text>
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    We have been Focusing on Sustainable Eco Packaging Products for over 14 Years, Our factory has been leading in eco-friendly packaging. We have been working on the R&D, design, and production to narrow environment impact we still providing our high quality solutions to our customers.
+    Eco-Friendy Packaing solution provider.
 </>
   ),
 };
@@ -84,7 +84,7 @@ const home: Home = {
 const about: About = {
   path: "https://wa.me/+919821689957",
   label: "About",
-  title: `Connect – +919821689957`,
+  title: `📞  +91 9821689957`,
   description: ``,
   tableOfContent: {
     display: true,

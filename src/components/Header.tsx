@@ -75,7 +75,7 @@ export const Header = () => {
       >
         <Row paddingLeft="12" fillWidth vertical="center">
           <Image
-            src="/images/og/home.jpg"
+            src="/images/og/Victorlogo.png"
             alt="Premium Eco Packaging"
             width={140}   // adjust based on your logo
             height={40}

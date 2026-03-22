@@ -63,10 +63,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         gap="l"
       >
         {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+          <Flex flex={1} horizontal="center" vertical="center">
+            <Text
+              variant="body-default-m"  // normal paragraph size
+              wrap="balance"
+              align="center"             // center the text
+            >
               {title}
-            </Heading>
+            </Text>
           </Flex>
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
