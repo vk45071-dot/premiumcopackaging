@@ -10,6 +10,8 @@ import {
   Text,
 } from "@once-ui-system/core";
 
+import Image from "next/image";
+
 interface ProjectCardProps {
   href: string;
   priority?: boolean;
@@ -23,20 +25,33 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
-  images = [],
   title,
   content,
   description,
   avatars,
   link,
 }) => {
+
+  const images = [
+    "/images/home/Premium Eco Packaging_1.jpg",
+    "/images/home/Premium Eco Packaging_2.jpg",
+    "/images/home/Premium Eco Packaging_3.jpg"
+  ]
   return (
     <Column fillWidth gap="m">
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
+        items={images.map((image, index) => ({
+          slide: (
+            <Image
+              src={image}
+              alt={title}
+              width={960}
+              height={540}
+              style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+              priority={index === 0}
+            />
+          ),
         }))}
       />
       <Flex

@@ -8,6 +8,7 @@ import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import Image from "next/image";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -72,8 +73,15 @@ export const Header = () => {
           position: "fixed",
         }}
       >
-        <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {'Premium Eco Packaging'}
+        <Row paddingLeft="12" fillWidth vertical="center">
+          <Image
+            src="/images/og/home.jpg"
+            alt="Premium Eco Packaging"
+            width={140}   // adjust based on your logo
+            height={40}
+            priority
+            style={{ objectFit: "contain" }}
+          />
         </Row>
         <Row fillWidth horizontal="center">
           <Row

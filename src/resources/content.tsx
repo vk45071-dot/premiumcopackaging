@@ -60,38 +60,38 @@ const home: Home = {
   label: "Home",
   title: `${person.name}`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>PREMIUM ECO PACKAGING</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Need Something</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Connect with US
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "https://wa.me/+919821689957",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    We have been Focusing on Sustainable Eco Packaging Products for over 14 Years, Our factory has been leading in eco-friendly packaging. We have been working on the R&D, design, and production to narrow environment impact we still providing our high quality solutions to our customers.
 </>
   ),
 };
 
 const about: About = {
-  path: "/about",
+  path: "https://wa.me/+919821689957",
   label: "About",
-  title: `About – ${person.name}`,
+  title: `Connect – +919821689957`,
   description: ``,
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
     display: true,
