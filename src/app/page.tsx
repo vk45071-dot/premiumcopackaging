@@ -15,6 +15,7 @@ import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import { Card, Media } from "@once-ui-system/core";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -103,6 +104,43 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
+
+      <Column fillWidth gap="32">
+        <Heading as="h2" variant="display-strong-xs">
+          Our Categories
+        </Heading>
+
+        <Row fillWidth gap="32" s={{ direction: "column" }}>
+          {home.galleryCategories.map((item) => (
+            <Card
+              key={item.id}
+              href={`/gallery?category=${item.category}`}
+              fillWidth
+              direction="column"
+              radius="l"
+              overflow="hidden"
+              style={{ flex: "1 1 calc(50% - 16px)" }} // ✅ 2-column layout
+            >
+              <Media
+                src={item.image}
+                alt={item.title}
+                aspectRatio="16/9"
+                sizes="(min-width: 768px) 50vw, 100vw" // ✅ image fills half screen on desktop
+              />
+
+              <Column padding="20" gap="12">
+                <Heading variant="heading-strong-m">
+                  {item.title}
+                </Heading>
+                <Text onBackground="neutral-weak">
+                  {item.description}
+                </Text>
+              </Column>
+            </Card>
+          ))}
+        </Row>
+      </Column>
+
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
@@ -123,7 +161,12 @@ export default function Home() {
           </Row>
         </Column>
       )}
-      <Projects range={[2]} />
+
+
+
+      <Projects range={[1]} />
+
+
       <Mailchimp />
     </Column>
   );

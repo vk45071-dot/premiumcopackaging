@@ -74,11 +74,43 @@ const home: Home = {
     ),
     href: "https://wa.me/+919821689957",
   },
+  galleryCategories: [
+    {
+      id: "1",
+      image: "/images/home/categories/Premium Invitation Cards.jpg",
+      title: "Premium Invitation Cards",
+      category:"PremiumInvitationCards",
+      description: "Eco-friendly packaging solutions for food businesses.",
+    },
+    {
+      id: "2",
+      image: "/images/home/categories/Packaging Customization.jpg",
+      title: "Packaging Customization",
+      category:"PackagingCustomization",
+      description: "Sustainable packaging for modern retail brands.",
+    },
+    {
+      id: "3",
+      image: "/images/home/categories/Wedding favour & Sweet boxes.jpg",
+      title: "Wedding favour & Sweet boxes",
+      category:"Weddingfavour",
+      description: "Tailored packaging designs for your brand.",
+    },
+    {
+      id: "4",
+      image: "/images/home/categories/Business Packaging.jpg",
+      title: "Business Packaging",
+      category:"BusinessPackaging",
+      description: "Durable and eco-safe industrial packaging.",
+    },
+  ],
   subline: (
     <>
-    Eco-Friendy Packaing solution provider.
-</>
+      Eco-Friendy Packaing solution provider.
+    </>
   ),
+
+
 };
 
 const about: About = {
@@ -262,43 +294,52 @@ const gallery: Gallery = {
       src: "/images/gallery/Customized Packaging_01.jpg",
       alt: "image",
       orientation: "horizontal",
+      category: "PremiumInvitationCards",
     },
     {
       src: "/images/gallery/Event Packaging_03.jpg",
       alt: "image",
       orientation: "vertical",
+      category: "PremiumInvitationCards",
     },
     {
       src: "/images/gallery/Employee Welcome Kit_02.jpg",
       alt: "image",
       orientation: "horizontal",
+      category: "custom",
     },
     {
       src: "/images/gallery/ShoesPackaging_04.jpg",
       alt: "image",
       orientation: "vertical",
+      category: "retail",
     },
     {
       src: "/images/gallery/Cosmetic Packaging_05.jpg",
       alt: "image",
       orientation: "vertical",
+      category: "retail",
     },
     {
       src: "/images/gallery/Cosmetic Packaging_06.jpg",
       alt: "image",
       orientation: "horizontal",
+      category: "retail",
     },
     {
       src: "/images/gallery/Cardboard Packaging_07.jpg",
       alt: "image",
       orientation: "horizontal",
+      category: "industrial",
     },
     {
       src: "/images/gallery/Eco Packaging_8.jpg",
       alt: "image",
       orientation: "vertical",
+      category: "food",
     },
   ],
 };
+
 
 export { person, social, newsletter, home, about, blog, work, gallery };

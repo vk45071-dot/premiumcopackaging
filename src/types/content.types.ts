@@ -99,6 +99,17 @@ export interface Home extends BasePageConfig {
     title: React.ReactNode;
     href: string;
   };
+
+  galleryCategories: Array<{
+    /** Image source path */
+    id: string;
+    /** Image alt text */
+    image: string;
+    /** Image orientation (horizontal/vertical) */
+    title: string;
+    category: string;
+    description: string;
+  }>
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
 }
@@ -236,5 +247,6 @@ export interface Gallery extends BasePageConfig {
     alt: string;
     /** Image orientation (horizontal/vertical) */
     orientation: string;
+    category?: string;
   }>;
 }
