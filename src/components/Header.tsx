@@ -77,8 +77,8 @@ export const Header = () => {
           <Image
             src="/images/og/Victorlogo.png"
             alt="Premium Eco Packaging"
-            width={140}   // adjust based on your logo
-            height={40}
+            width={80}   // adjust based on your logo
+            height={15}
             priority
             style={{ objectFit: "contain" }}
           />
@@ -95,10 +95,10 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" label={"Home"} href="/" selected={pathname === "/"} />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
+              {/* {routes["/about"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
@@ -116,7 +116,7 @@ export const Header = () => {
                     />
                   </Row>
                 </>
-              )}
+              )} */}
               {/* {routes["/work"] && (
                 <>
                   <Row s={{ hide: true }}>
