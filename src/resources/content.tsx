@@ -601,12 +601,12 @@ const gallery: Gallery = {
       orientation: "horizontal",
       category: "Weddingfavour",
     },
-    {
-      src: "/images/gallery/WeddingFavourSweetBoxes/14_ Premium Sweets wedding.jpg",
-      alt: "Premium Sweets wedding",
-      orientation: "horizontal",
-      category: "Weddingfavour",
-    },
+    // {
+    //   src: "/images/gallery/WeddingFavourSweetBoxes/14_ Premium Sweets wedding.jpg",
+    //   alt: "Premium Sweets wedding",
+    //   orientation: "horizontal",
+    //   category: "Weddingfavour",
+    // },
     {
       src: "/images/gallery/WeddingFavourSweetBoxes/15_wedding Jar card box.jpg",
       alt: "wedding Jar card box",
