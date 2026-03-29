@@ -16,6 +16,9 @@ import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 import { Card, Media } from "@once-ui-system/core";
+import { FaInstagram, FaPinterest, FaWhatsapp } from "react-icons/fa";
+import { MdLocationOn } from "react-icons/md";
+import { MdPhone, MdEmail } from "react-icons/md";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -28,6 +31,45 @@ export async function generateMetadata() {
 }
 
 export default function Home() {
+
+  const teamMembers = [
+    {
+      role: "Sales Head",
+      name: "Sonu Rathod",
+      description:
+        "We serve more than 100 brands worldwide and constantly reducing their current packaging costs, making it easier to choose us. Just click for your products delivery, 100% hassle-free.",
+      image: "/images/home/Sonu Rathod.jpg",
+      whatsapp: "https://wa.me/+919821689957",
+      instagram: "https://www.instagram.com/premiumecopackaging?igsh=MjYwMW0xcWVqMGRw",
+      pinterest: "https://pin.it/6FzcqPu7k",
+    },
+    {
+      role: "Founder & Production Manager",
+      name: "Deepika Rathod",
+      description:
+        "We have high-quality work parameters: Hygiene Inspection, product finishing inspection, pre-shipping inspection; we ensure that our customers receive the quality product.",
+      image: "/images/home/Deepika Rathod.jpg",
+      whatsapp: "https://wa.me/+917503238757",
+      instagram: "https://www.instagram.com/premiumecopackaging?igsh=MjYwMW0xcWVqMGRw",
+      pinterest: "https://pin.it/6FzcqPu7k",
+    },
+    {
+      role: "Senior Designer",
+      name: "Vanessa",
+      description:
+        "Create overall design solutions, from the choice of color, material, and printing with my professional skills to create the strongest brand.",
+      image: "/images/home/Vanessa.jpg",
+      whatsapp: "https://wa.me/+919654133663",
+      instagram: "https://www.instagram.com/premiumecopackaging?igsh=MjYwMW0xcWVqMGRw",
+      pinterest: "https://pin.it/6FzcqPu7k",
+    },
+  ];
+
+  const officeMapLink =
+    "https://www.google.com/maps?q=28.50606346130371,77.32718658447266&z=17&hl=en";
+  const factoryMapLink =
+    "https://maps.app.goo.gl/zBuaupxiJWkX59RH9?g_st=ipc";
+
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
@@ -75,7 +117,7 @@ export default function Home() {
             <Text
               wrap="balance"
               variant="heading-default-xl"
-              style={{ color: "#33612c" }}
+              style={{ color: "#33612c", fontSize: "1.8rem", lineHeight: "1.2" }}
             >
               {home.subline}
             </Text>
@@ -189,80 +231,60 @@ export default function Home() {
         </Heading>
 
         <Row fillWidth gap="32" s={{ direction: "column" }}>
+          {teamMembers.map((member, index) => (
+            <Card
+              key={index}
+              fillWidth
+              direction="column"
+              radius="l"
+              overflow="hidden"
+              style={{ flex: "1 1 calc(50% - 16px)", cursor: "pointer" }}
+            >
+              {/* Image */}
+              <Media
+                src={member.image}
+                alt={member.name}
+                aspectRatio="3/4"
+              />
 
-          <Card
-            href="https://wa.me/+919821689957"
-            fillWidth
-            direction="column"
-            radius="l"
-            overflow="hidden"
-            style={{ flex: "1 1 calc(50% - 16px)" }}
-          >
-            <Media
-              src="/images/home/Sonu Rathod.jpg" // replace with actual image
-              alt="Founder & Production Manager"
-              aspectRatio="3/4"
-            />
-            <Column padding="20" gap="8">
-              <Heading variant="heading-strong-m">
-                Sales Head
-              </Heading>
-              <Text onBackground="neutral-weak">
-                We serve more than 100 brands worldwide and constantly reducing their current packaging costs, it's making easier to choose us. All you Just click for your products delevery, 100% hassle-free
-              </Text>
-            </Column>
-          </Card>
+              {/* Info */}
+              <Column padding="20" gap="8">
+                {/* Role */}
+                <Text style={{ fontSize: "0.8rem", fontWeight: "400" }}>
+                  {member.role}
+                </Text>
 
-          {/* Founder */}
-          <Card
-            href="https://wa.me/+917503238757"
-            fillWidth
-            direction="column"
-            radius="l"
-            overflow="hidden"
-            style={{ flex: "1 1 calc(50% - 16px)" }}
-          >
-            <Media
-              src="/images/home/Deepika Rathod.jpg" // replace with actual image
-              alt="Founder & Production Manager"
-              aspectRatio="3/4"
-            />
-            <Column padding="20" gap="8">
-              <Heading variant="heading-strong-m">
-                Founder & Production Manager
-              </Heading>
-              <Text onBackground="neutral-weak">
-                We have a high quality work parameters, Hygiene Inspection, product finishing inspection, pre-shipping inspection, we ensure that our customers receive the quality product
-              </Text>
-            </Column>
-          </Card>
+                {/* Name */}
+                <Text style={{ fontSize: "1.25rem", fontWeight: "600" }}>
+                  {member.name}
+                </Text>
 
-          {/* Designer */}
-          <Card
-            href="https://wa.me/+919654133663"
-            fillWidth
-            direction="column"
-            radius="l"
-            overflow="hidden"
-            style={{ flex: "1 1 calc(50% - 16px)", cursor: "pointer" }}
-          >
-            <Media
-              src="/images/home/Vanessa.jpg" // replace with actual image
-              alt="Senior Designer"
-              aspectRatio="3/4"
-            />
-            <Column padding="20" gap="8">
-              <Heading variant="heading-strong-m">
-                Senior Designer
-              </Heading>
-              <Text onBackground="neutral-weak">
-                Create overall design solutions, from the choice of color, material, and printing with my professional skills to create the strongest brand
-              </Text>
-            </Column>
-          </Card>
+                {/* Description */}
+                <Text onBackground="neutral-weak">
+                  {member.description}
+                </Text>
 
-
-
+                {/* Social Media */}
+                <Row gap="16" marginTop="12">
+                  {member.instagram && (
+                    <a href={member.instagram} target="_blank" rel="noreferrer">
+                      <FaInstagram size={20} color="#E1306C" />
+                    </a>
+                  )}
+                  {member.pinterest && (
+                    <a href={member.pinterest} target="_blank" rel="noreferrer">
+                      <FaPinterest size={20} color="#BD081C" />
+                    </a>
+                  )}
+                  {member.whatsapp && (
+                    <a href={member.whatsapp} target="_blank" rel="noreferrer">
+                      <FaWhatsapp size={20} color="#25D366" />
+                    </a>
+                  )}
+                </Row>
+              </Column>
+            </Card>
+          ))}
         </Row>
       </Column>
 
@@ -292,13 +314,20 @@ export default function Home() {
                   borderRadius: "12px",
                   padding: "20px",
                 }}
-                gap="12"
+                gap="8"
               >
                 {/* Icon */}
                 <div style={{ fontSize: "40px", color: "#000" }}>👤</div>
 
+                {/* Name */}
                 <Heading variant="heading-strong-m">Avinash</Heading>
 
+                {/* Company */}
+                <Text style={{ fontSize: "0.85rem", color: "#555", marginBottom: "8px" }}>
+                  Dhir Garden & Party Lawn
+                </Text>
+
+                {/* Review Text */}
                 <Text onBackground="neutral-weak">
                   We used PEP service for our wedding invitations, and they were absolutely perfect. Many friends and family contacted us to say they were the best wedding invitation cards they had ever received. Premium Eco Packaging cards was incredibly awesome 🙌 throughout the entire process and delivered quickly. We give them a 10 out of 10 rating and highly recommend them.
                 </Text>
@@ -312,13 +341,20 @@ export default function Home() {
                   borderRadius: "12px",
                   padding: "20px",
                 }}
-                gap="12"
+                gap="8"
               >
                 {/* Icon */}
                 <div style={{ fontSize: "40px", color: "#000" }}>👤</div>
 
+                {/* Name */}
                 <Heading variant="heading-strong-m">Mr. Kush</Heading>
 
+                {/* Company */}
+                <Text style={{ fontSize: "0.85rem", color: "#555", marginBottom: "8px" }}>
+                  LA Prime Production
+                </Text>
+
+                {/* Review Text */}
                 <Text onBackground="neutral-weak">
                   It was a pleasure working with Premium Eco Packagings - Deepika Ma'am and her design team. They were so polite, communicative, and adept at checking formatting.
                   They created my cosmetic packaging boxes. Their embossing and foiling work was excellent.
@@ -342,6 +378,97 @@ export default function Home() {
 
 
       {/* <Mailchimp /> */}
+
+      <Column fillWidth gap="32">
+        <Heading as="h2" variant="display-strong-xs">Our Locations</Heading>
+        <Row fillWidth gap="32" s={{ direction: "column" }}>
+          {/* Office Address Card */}
+          <Card
+            href={officeMapLink}
+            rel="noreferrer"
+            fillWidth
+            direction="row"
+            radius="l"
+            overflow="hidden"
+            style={{ cursor: "pointer", alignItems: "center", padding: "20px" }}
+          >
+            <MdLocationOn size={36} color="#33612c" style={{ marginRight: "16px" }} />
+            <Column>
+              <Heading variant="heading-strong-m">Office Address</Heading>
+              <Text onBackground="neutral-weak">
+                Premium Eco Packaging, 4th Floor, Building No. 381/1 Badarpur, S-BLK, Saurabh Vihar, New Delhi -110044 Delhi | India
+              </Text>
+              <Text style={{ color: "#33612c", fontWeight: "500", marginTop: "8px" }}>
+                Go to Map
+              </Text>
+            </Column>
+          </Card>
+
+          {/* Factory Address Card */}
+          <Card
+            href={factoryMapLink}
+            rel="noreferrer"
+            fillWidth
+            direction="row"
+            radius="l"
+            overflow="hidden"
+            style={{ cursor: "pointer", alignItems: "center", padding: "20px" }}
+          >
+            <MdLocationOn size={36} color="#33612c" style={{ marginRight: "16px" }} />
+            <Column>
+              <Heading variant="heading-strong-m">Factory Address</Heading>
+              <Text onBackground="neutral-weak">
+                Premium Eco Packaging, 8, Alli Ahmadpur Urf Garhi, Gautam Buddha Nagar, Jewar-203155, Uttar Pradesh | India
+              </Text>
+              <Text style={{ color: "#33612c", fontWeight: "500", marginTop: "8px" }}>
+                Go to Map
+              </Text>
+            </Column>
+          </Card>
+        </Row>
+      </Column>
+
+      <Column fillWidth gap="32">
+        <Heading as="h2" variant="display-strong-xs">Contact Helpdesk</Heading>
+        <Row fillWidth gap="32" s={{ direction: "column" }}>
+          {/* Phone / WhatsApp */}
+          <Card
+            href="https://wa.me/917503238757"
+            rel="noreferrer"
+            fillWidth
+            direction="row"
+            radius="l"
+            overflow="hidden"
+            style={{ cursor: "pointer", alignItems: "center", padding: "20px" }}
+          >
+            <MdPhone size={36} color="#33612c" style={{ marginRight: "16px" }} />
+            <Column>
+              <Heading variant="heading-strong-m">Helpdesk Mobile & WhatsApp</Heading>
+              <Text style={{ color: "#33612c", fontWeight: "500", marginTop: "8px" }}>
+                +91 7503238757
+              </Text>
+            </Column>
+          </Card>
+
+          {/* Email */}
+          <Card
+            href="mailto:Info@premiumecopackaging.com"
+            fillWidth
+            direction="row"
+            radius="l"
+            overflow="hidden"
+            style={{ cursor: "pointer", alignItems: "center", padding: "20px" }}
+          >
+            <MdEmail size={36} color="#33612c" style={{ marginRight: "16px" }} />
+            <Column>
+              <Heading variant="heading-strong-m">Email</Heading>
+              <Text style={{ color: "#33612c", fontWeight: "500", marginTop: "8px" }}>
+                Info@premiumecopackaging.com
+              </Text>
+            </Column>
+          </Card>
+        </Row>
+      </Column>
     </Column>
   );
 }

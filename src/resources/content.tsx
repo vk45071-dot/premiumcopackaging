@@ -69,7 +69,7 @@ const home: Home = {
         {/* <strong className="ml-4">Need Something</strong>{" "} */}
         {/* <Line background="brand-alpha-strong" vert height="20" /> */}
         <Text marginRight="4" onBackground="brand-medium">
-          Connect with US
+          Connect with us
         </Text>
       </Row>
     ),
@@ -88,7 +88,7 @@ const home: Home = {
       image: "/images/home/categories/Premium Invitation Cards.jpg",
       title: "Premium Invitation Cards",
       category: "PremiumInvitationCards",
-      description: "Eco-friendly packaging solutions for food businesses.",
+      description: "Wide varieties of wedding invitation designs on offer. You can also send us any other invitation design of your choice.",
     },
     {
       id: "3",
@@ -107,7 +107,7 @@ const home: Home = {
   ],
   subline: (
     <>
-      Eco-Friendy Packaing solution provider.
+      Eco-Friendy Packaing solution provider
     </>
   ),
 
