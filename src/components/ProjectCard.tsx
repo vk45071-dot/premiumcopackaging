@@ -33,8 +33,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
 
   const images = [
-    "/images/home/Premium Eco Packaging_1.jpg",
     "/images/home/Premium Eco Packaging_2.jpg",
+    "/images/home/Premium Eco Packaging_1.jpg",
     "/images/home/Premium Eco Packaging_3.jpg"
   ]
   return (

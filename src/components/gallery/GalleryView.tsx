@@ -8,9 +8,11 @@ export default function GalleryView() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
 
-  const filteredImages = category
-    ? gallery.images.filter((img) => img.category === category)
-    : gallery.images;
+  // ✅ If category === "all" or null, show all images
+  const filteredImages =
+    !category || category === "all"
+      ? gallery.images
+      : gallery.images.filter((img) => img.category === category);
 
   return (
     <MasonryGrid columns={2} s={{ columns: 1 }}>

@@ -22,36 +22,36 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
+  // {
+  //   name: "GitHub",
+  //   icon: "github",
+  //   link: "https://github.com/once-ui-system",
+  //   essential: true,
+  // },
+  // {
+  //   name: "LinkedIn",
+  //   icon: "linkedin",
+  //   link: "https://www.linkedin.com/company/once-ui/",
+  //   essential: true,
+  // },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/premiumecopackaging?igsh=MjYwMW0xcWVqMGRw",
     essential: false,
   },
   {
     name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    icon: "pinterest",
+    link: "https://pin.it/6FzcqPu7k",
     essential: true,
   },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-    essential: true,
-  },
+  // {
+  //   name: "Email",
+  //   icon: "email",
+  //   link: `mailto:${person.email}`,
+  //   essential: true,
+  // },
 ];
 
 const home: Home = {
@@ -77,31 +77,31 @@ const home: Home = {
   galleryCategories: [
     {
       id: "1",
+      image: "/images/home/categories/Packaging Customization.jpg",
+      title: "Packaging Customization",
+      category: "PackagingCustomization",
+      description: "Customize your own branded packaging with us. We create premium eco packaging for large to small business, see which product best fits your needs",
+    },
+    {
+      id: "2",
       image: "/images/home/categories/Premium Invitation Cards.jpg",
       title: "Premium Invitation Cards",
       category: "PremiumInvitationCards",
       description: "Eco-friendly packaging solutions for food businesses.",
     },
     {
-      id: "2",
-      image: "/images/home/categories/Packaging Customization.jpg",
-      title: "Packaging Customization",
-      category: "PackagingCustomization",
-      description: "Sustainable packaging for modern retail brands.",
-    },
-    {
       id: "3",
       image: "/images/home/categories/Wedding favour & Sweet boxes.jpg",
       title: "Wedding favour & Sweet boxes",
       category: "Weddingfavour",
-      description: "Tailored packaging designs for your brand.",
+      description: "Our product approach focuses on creating luxurious and stunning, personalized wedding favours and gift packaging designs to commemorate the special moments and big celebrations in your life",
     },
     {
       id: "4",
       image: "/images/home/categories/Business Packaging.jpg",
-      title: "Business Packaging",
-      category: "BusinessPackaging",
-      description: "Durable and eco-safe industrial packaging.",
+      title: "In Stock Products",
+      category: "all",
+      description: "The most amazing Packaging Products are in stock- Multi Size, Multi Color, LOW MOQ and Fast delivery",
     },
   ],
   subline: (
