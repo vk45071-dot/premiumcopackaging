@@ -6,10 +6,11 @@ const person: Person = {
   lastName: "Yu",
   name: `Premium Eco Packaging`,
   role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/og/Victorlogo.png",
   email: "example@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  ///images/og/Victorlogo.png
 };
 
 const newsletter: Newsletter = {
